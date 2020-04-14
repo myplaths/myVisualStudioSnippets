@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>mirrorServerandClient</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>mirrServerClient</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ChangeColorOnCommand</ID>
+          <ToolTip>ChangeColorOnCommand</ToolTip>
+          <Default>ChangeColorOnCommand</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>CmdChangeColorOnCommand</ID>
+          <ToolTip>CmdChangeColorOnCommand</ToolTip>
+          <Default>CmdChangeColorOnCommand</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>param</ID>
+          <ToolTip>param</ToolTip>
+          <Default>param</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>RpcMethodName</ID>
+          <ToolTip>RpcMethodName</ToolTip>
+          <Default>RpcMethodName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>paramtwo</ID>
+          <ToolTip>paramtwo</ToolTip>
+          <Default>paramtwo</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>int</ID>
+          <ToolTip>int</ToolTip>
+          <Default>int</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>a</ID>
+          <ToolTip>a</ToolTip>
+          <Default>a</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>v</ID>
+          <ToolTip>v</ToolTip>
+          <Default>v</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>va</ID>
+          <ToolTip>va</ToolTip>
+          <Default>va</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>val</ID>
+          <ToolTip>val</ToolTip>
+          <Default>val</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>valu</ID>
+          <ToolTip>valu</ToolTip>
+          <Default>valu</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>value</ID>
+          <ToolTip>value</ToolTip>
+          <Default>value</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>var</ID>
+          <ToolTip>var</ToolTip>
+          <Default>var</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>vari</ID>
+          <ToolTip>vari</ToolTip>
+          <Default>vari</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>varia</ID>
+          <ToolTip>varia</ToolTip>
+          <Default>varia</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>variab</ID>
+          <ToolTip>variab</ToolTip>
+          <Default>variab</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>variabl</ID>
+          <ToolTip>variabl</ToolTip>
+          <Default>variabl</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>variable</ID>
+          <ToolTip>variable</ToolTip>
+          <Default>variable</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>MethodName</ID>
+          <ToolTip>MethodName</ToolTip>
+          <Default>MethodName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[Cmd$ChangeColorOnCommand$($selected$);
+ [Command]
+    void Cmd$ChangeColorOnCommand$($variable$ $value$)
+    {        
+        Debug.Log("this will sync the variable");
+        playerColor = $value$;
+        SetColor(Color.black, $value$);
+        Rpc$MethodName$(playerColor);
+    }
+
+    [ClientRpc]
+    void Rpc$MethodName$($variable$ $value$)
+    {
+        Debug.Log("Rpc$MethodName$");
+        SetColor($paramtwo$,$paramtwo$);
+    }
+
+
+void SetColor(Color32 oldColor, Color32 newColor)
+    {
+        if (cachedMaterial == null)
+            cachedMaterial = GetComponent<Renderer>().material;
+
+        cachedMaterial.color = newColor;
+    }
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
