@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>MenuItem</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>menuitem</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>TheName</ID>
+          <ToolTip>TheName</ToolTip>
+          <Default>TheName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>LocationMakeResourcesFolder</ID>
+          <ToolTip>LocationMakeResourcesFolder</ToolTip>
+          <Default>LocationMakeResourcesFolder</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>methodName</ID>
+          <ToolTip>methodName</ToolTip>
+          <Default>methodName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
+#if UNITY_EDITOR
+    [MenuItem("GameObject/UI/$TheName$")]
+    public static void $methodName$()
+    {
+        GameObject obj = Instantiate(Resources.Load<GameObject>("UI/$LocationMakeResourcesFolder$"));
+        obj.transform.SetParent(Selection.activeGameObject.transform, false);
+    } 
+
+
+#endif$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
