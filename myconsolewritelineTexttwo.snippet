@@ -5,46 +5,33 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>mirrorServerandClient</Title>
+      <Title>myconsolewritelineTexttwo</Title>
       <Author>
       </Author>
       <Description>
       </Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>mirrServerClient</Shortcut>
+      <Shortcut>cww1</Shortcut>
     </Header>
     <Snippet>
       <Declarations>
         <Literal Editable="true">
-          <ID>ChangeName</ID>
-          <ToolTip>ChangeName</ToolTip>
-          <Default>ChangeName</Default>
+          <ID>t</ID>
+          <ToolTip>t</ToolTip>
+          <Default>t</Default>
           <Function>
           </Function>
         </Literal>
         <Literal Editable="true">
-          <ID>RpcChangeName</ID>
-          <ToolTip>RpcChangeName</ToolTip>
-          <Default>RpcChangeName</Default>
+          <ID>variable</ID>
+          <ToolTip>variable</ToolTip>
+          <Default>variable</Default>
           <Function>
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp" Delimiter="$"><![CDATA[ Cmd$ChangeName$();
-    [Command]
-    void Cmd$ChangeName$()
-    {
-        Debug.Log("this will sync the variable");
-        Rpc$ChangeName$();
-    }
-
-    [ClientRpc]
-    void Rpc$ChangeName$()
-    {
-        Debug.Log("Rpc$ChangeName$");
-
-    }$end$]]></Code>
+      <Code Language="csharp" Delimiter="$"><![CDATA[Console.WriteLine("$t$" + $variable$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>
